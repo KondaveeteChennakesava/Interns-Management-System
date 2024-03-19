@@ -165,7 +165,6 @@ const GetIntern = () => {
                     />
                   </div>
                 </div>
-                <Button className="btn btn-primary">This is a button</Button>
               </CardBody>
             </Card>
           </Col>

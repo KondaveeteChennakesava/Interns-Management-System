@@ -128,7 +128,7 @@ const AddIntern = () => {
                         Gender
                       </Label>
                       <select
-                        className="form-control"
+                        className="form-control arrow-down"
                         id="gender"
                         value={formdata.gender}
                         onChange={(e) =>
@@ -146,7 +146,7 @@ const AddIntern = () => {
                         Passout year
                       </Label>
                       <select
-                        className="form-control"
+                        className="form-control arrow-down"
                         id="passout"
                         value={formdata.passout}
                         onChange={(e) =>
