@@ -10,7 +10,7 @@ const Footer = () => {
             <Col md={6}>{new Date().getFullYear()} © Qovex.</Col>
             <Col md={6}>
               <div className="text-sm-end d-none d-sm-block">
-                Design & Develop by Themesbrand
+                Design & Develop by Interns Management System
               </div>
             </Col>
           </Row>

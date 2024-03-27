@@ -16,7 +16,7 @@ import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu";
 
 import logoSm from "../../assets/images/logo-sm.png";
 import logoDark from "../../assets/images/logo-dark.png";
-import logoLight from "../../assets/images/logo-light.png";
+import logoLight from "../../assets/images/logo-light-1.png";
 
 // import images
 import github from "../../assets/images/brands/github.png";
@@ -120,50 +120,29 @@ const Header = (props) => {
                 </DropdownMenu>
               </Dropdown>
               <LanguageDropdown />{" "}
-              <Dropdown className="d-none d-lg-inline-block ms-1">
-                <button
-                  type="button"
-                  onClick={() => {
-                    toggleFullscreen();
-                  }}
-                  className="btn header-item noti-icon waves-effect"
-                  data-toggle="fullscreen"
-                >
-                  <i className="mdi mdi-fullscreen"></i>
-                </button>
-              </Dropdown>{" "}
               <NotificationDropdown /> <ProfileMenu />{" "}
-              <button
-                type="button"
-                className="btn header-item noti-icon right-bar-toggle waves-effect"
-                onClick={() => {
-                  props.showRightSidebarAction(!props.showRightSidebar);
-                }}
-              >
-                <i className="mdi mdi-settings-outline"></i>
-              </button>
             </div>
             <div>
               <div className="navbar-brand-box">
                 <Link to="/" className="logo logo-dark">
                   <span className="logo-sm">
-                    <img src={logoSm} alt="" height="20" />
+                    <img src={logoSm} alt="" height="100" />
                   </span>
                   <span className="logo-lg">
-                    <img src={logoDark} alt="" height="19" />
+                    <img src={logoDark} alt="" height="100" />
                   </span>
                 </Link>
 
                 <Link to="/" className="logo logo-light">
                   <span className="logo-sm">
-                    <img src={logoSm} alt="" height="20" />
+                    <img src={logoSm} alt="" height="100" />
                   </span>
                   <span className="logo-lg">
-                    <img src={logoLight} alt="" height="19" />
+                    <img src={logoLight} alt="" height="70" />
                   </span>
                 </Link>
               </div>
-              <button
+              {/* <button
               type="button"
               className="btn btn-sm px-3 font-size-16 d-lg-none header-item waves-effect waves-light"
               data-toggle="collapse"
@@ -377,7 +356,7 @@ const Header = (props) => {
                     </Col>
                   </Row>
                 </DropdownMenu>
-              </Dropdown>
+              </Dropdown> */}
             </div>
           </Container>
         </div>

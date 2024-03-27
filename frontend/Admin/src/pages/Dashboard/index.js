@@ -1,27 +1,26 @@
-import React from "react"
-import { Row, Col, CardBody, Card, Progress } from "reactstrap"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Row, Col, CardBody, Card, Progress } from "reactstrap";
+import { Link } from "react-router-dom";
 
 //Import Components
-import LineChart from "./line-chart"
-import RevenueChart from "./revenue-chart"
-import SalesAnalytics from "./sales-analytics"
-import ScatterChart from "./scatter-analytics"
-import LatestTransaction from "./latest-transaction"
+import LineChart from "./line-chart";
+import RevenueChart from "./revenue-chart";
+import SalesAnalytics from "./sales-analytics";
+import ScatterChart from "./scatter-analytics";
+import LatestTransaction from "./latest-transaction";
 
 //Import Image
-import widgetImage from "../../assets/images/widget-img.png"
+import widgetImage from "../../assets/images/widget-img.png";
 import Overview from "./Overview";
-import Reviews from './Reviews';
-import Revenue from './Revenue';
-import Inbox  from './Inbox';
+import Reviews from "./Reviews";
+import Revenue from "./Revenue";
+import Inbox from "./Inbox";
+import PieChart from "../AllCharts/echart/piechart";
 
 const Dashboard = () => {
-
   return (
     <React.Fragment>
       <div className="page-content">
-  
         <Row>
           <div className="col-12">
             <div className="page-title-box d-flex align-items-center justify-content-between">
@@ -29,15 +28,23 @@ const Dashboard = () => {
 
               <div className="page-title-right">
                 <ol className="breadcrumb m-0">
-                  <li className="breadcrumb-item active">Welcome to Qovex Dashboard</li>
+                  <li className="breadcrumb-item active">
+                    Welcome to Technical Hub Interns Management
+                  </li>
                 </ol>
               </div>
-
             </div>
           </div>
         </Row>
-
         <Row>
+          <Col lg={6}>
+            <PieChart />
+          </Col>
+          {/* <Col lg={6}>
+            <PieChart />
+          </Col> */}
+        </Row>
+        {/* <Row>
           <Col lg={3}>
             <Card>
               <CardBody>
@@ -147,11 +154,10 @@ const Dashboard = () => {
         <Row>
           <Inbox />
           <LatestTransaction />
-        </Row>
-
+        </Row> */}
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

@@ -35,7 +35,7 @@ const LanguageDropdown = () => {
 
   return (
     <>
-      <Dropdown isOpen={menu} toggle={toggle} className="d-none d-sm-inline-block">
+      {/* <Dropdown isOpen={menu} toggle={toggle} className="d-none d-sm-inline-block">
         <DropdownToggle className="btn header-item waves-effect" tag="button">
           <img
             src={get(languages, `${selectedLang}.flag`)}
@@ -63,7 +63,7 @@ const LanguageDropdown = () => {
             </DropdownItem>
           ))}
         </DropdownMenu>
-      </Dropdown>
+      </Dropdown> */}
     </>
   )
 }

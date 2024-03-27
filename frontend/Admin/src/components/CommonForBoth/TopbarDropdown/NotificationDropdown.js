@@ -23,14 +23,14 @@ const NotificationDropdown = props => {
         className="dropdown d-inline-block"
         tag="li"
       >
-        <DropdownToggle
+        {/* <DropdownToggle
           className="btn header-item noti-icon waves-effect"
           tag="button"
           id="page-header-notifications-dropdown"
         >
           <i className="mdi mdi-bell-outline"></i>
           <span className="badge rounded-pill bg-danger ">3</span>
-        </DropdownToggle>
+        </DropdownToggle> */}
 
         <DropdownMenu className="dropdown-menu-lg dropdown-menu-end p-0">
           <div className="p-3">
