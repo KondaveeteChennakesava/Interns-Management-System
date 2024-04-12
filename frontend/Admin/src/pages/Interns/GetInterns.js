@@ -41,11 +41,11 @@ const GetIntern = () => {
       "Are you sure you want to delete this intern?"
     );
     if (confirmDelete) {
-      console.log(id);
+      // console.log(id);
       axiosAPI
         .delete("http://localhost:1432/api/delete-intern/" + id)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           alert("Data deleted successfully");
           setIntern(intern.filter((intern) => intern._id !== id));
           toggleModal(); // Close modal after deleting intern
@@ -56,21 +56,6 @@ const GetIntern = () => {
         });
     }
   };
-  // const handleDelete = () => {}
-  // const handleDelete = (id) => {
-  //   console.log(id)
-  //   axiosAPI
-  //     .delete("http://localhost:1432/api/delete-intern/" + id)
-  //     .then((res) => {
-  //       console.log(res);
-  //       alert("Data deleted successfully");
-  //       setIntern(intern.filter((event) => event._id !== id));
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error deleting event:", error);
-  //       alert("Failed to delete event");
-  //     });
-  // };
 
   const data = {
     columns: [
@@ -98,30 +83,6 @@ const GetIntern = () => {
         sort: "asc",
         width: 100,
       },
-      // {
-      //   label: "Mobile Number",
-      //   field: "mobileNo",
-      //   sort: "asc",
-      //   width: 100,
-      // },
-      // {
-      //   label: "Gender",
-      //   field: "gender",
-      //   sort: "asc",
-      //   width: 100,
-      // },
-      // {
-      //   label: "Passout Year",
-      //   field: "passout",
-      //   sort: "asc",
-      //   width: 100,
-      // },
-      // {
-      //   label: "Branch",
-      //   field: "branch",
-      //   sort: "asc",
-      //   width: 270,
-      // },
       {
         label: "Start Date",
         field: "startDate",
@@ -134,48 +95,12 @@ const GetIntern = () => {
         sort: "asc",
         width: 100,
       },
-      // {
-      //   label: "Bank Account Number",
-      //   field: "bankAcntNo",
-      //   sort: "asc",
-      //   width: 100,
-      // },
-      // {
-      //   label: "Account Holder Name",
-      //   field: "acntHolderName",
-      //   sort: "asc",
-      //   width: 100,
-      // },
-      // {
-      //   label: "IFSC Code",
-      //   field: "ifscCode",
-      //   sort: "asc",
-      //   width: 100,
-      // },
-      // {
-      //   label: "Bank Branch Name",
-      //   field: "bankBranch",
-      //   sort: "asc",
-      //   width: 100,
-      // },
       {
         label: "Action",
         field: "view",
         sort: "asc",
         width: 200,
       },
-      // {
-      //   label: "EDIT",
-      //   field: "edit",
-      //   sort: "disabled",
-      //   width: 100,
-      // },
-      // {
-      //   label: "DELETE",
-      //   field: "delete",
-      //   sort: "disabled",
-      //   width: 150,
-      // },
     ],
     rows: intern.map((event) => ({
       ...event,
@@ -231,6 +156,7 @@ const GetIntern = () => {
                 <p>Branch: {selectedIntern.branch}</p>
                 <p>Gender: {selectedIntern.gender}</p>
                 <p>Paasout Year: {selectedIntern.passout}</p>
+                <p>Added By: {selectedIntern.addedBy}</p>
                 <p>
                   <b>Bank Account Details:</b>
                 </p>

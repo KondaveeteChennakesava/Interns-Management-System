@@ -14,31 +14,35 @@ class PieChart extends Component {
     // For now, I'll use the provided sample data
     const dataFromBackend = [
       {
-        amount: "98",
-        name: "FSD",
+        amount: "10",
+        name: "Full Stack",
       },
       {
-        amount: "98",
-        name: "AWS",
+        amount: "9",
+        name: "AWS-Devops",
       },
       {
-        amount: "98",
+        amount: "8",
+        name: "Azure-Devops",
+      },
+      {
+        amount: "4",
+        name: "Google Cloud",
+      },
+      {
+        amount: "3",
+        name: "AIML",
+      },
+      {
+        amount: "9",
         name: "PEGA",
       },
       {
-        amount: "98",
+        amount: "8",
         name: "Salesforce",
       },
       {
-        amount: "98",
-        name: "FSD",
-      },
-      {
-        amount: "110",
-        name: "Google Devops",
-      },
-      {
-        amount: "76",
+        amount: "3",
         name: "Gaming",
       },
     ];
@@ -85,12 +89,12 @@ class PieChart extends Component {
       //     color: ["#74788d"],
       //   },
       // },
-      color: ["#ec4561", "#f8b425", "#02a499", "#38a4f8", "#3c4ccf", "#343a40"],
+      color: ["#ec4561", "#f8b425", "#02a499", "#38a4f8", "#3c4ccf", "#44247c"],
       series: [
         {
           name: "Interns",
           type: "pie",
-          radius: "55%",
+          radius: "65%",
           center: ["50%", "50%"],
           data: seriesData,
           itemStyle: {

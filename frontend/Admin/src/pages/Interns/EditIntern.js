@@ -58,21 +58,24 @@ const EditIntern = () => {
     axiosAPI
       .get(api + id)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setFormdata(res.data.response);
       })
       .catch((err) => console.log(err));
   }, []);
-
   const handleEdit = (e) => {
     e.preventDefault();
-    console.log(formdata);
-    console.log(id)
-    // console.log(APP_URL + 'api/update-intern/' + id)
-    axiosAPI.post(APP_URL + 'api/update-intern/' + id, formdata ).then((result) => {
-      alert("Updated successfully.");
-      window.location.href = "/api/get-interns";
-    });
+    console.log(APP_URL + 'api/update-intern/' + id);
+    axiosAPI.patch(APP_URL + 'api/update-intern/' + id, formdata)
+      .then((result) => {
+        // console.log(result);
+        alert("Intern updated successfully!");
+        window.location.href = "/api/get-interns";
+      })
+      .catch((error) => {
+        // console.log(error);
+        alert("Failed to update intern!");
+      });
   };
   return (
     <React.Fragment>

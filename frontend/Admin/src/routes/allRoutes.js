@@ -107,7 +107,6 @@ import LockScreen from "../pages/AuthenticationInner/auth-lock-screen"
 import UserProfile from "../pages/Authentication/user-profile"
 import AddIntern from "../pages/Interns/AddIntern.js"
 import GetInterns from "../pages/Interns/GetInterns.js"
-import Hyndavi from "../pages/Interns/Hyndavi.js"
 import EditIntern from "../pages/Interns/EditIntern.js"
 
 const userRoutes = [
@@ -116,7 +115,6 @@ const userRoutes = [
   { path: "/calendar", component: Calendar },
   {path: "/api/add-intern", component: AddIntern},
   {path: "/api/get-interns", component: GetInterns},
-  {path: "/api/hyndavi", component: Hyndavi},
   {path: "/api/edit-intern/:id", component: EditIntern},
 
   //Email

@@ -80,17 +80,19 @@ const InternDataById = async (req, res, next) => {
 };
 
 //controller code to update single record of data by Id in database
-const UpdateSingleIntern = async (req, res, next) => {
-  const _id = req.params.id;
-  console.log(req.body);
-  InternData.findByIdAndUpdate(_id, req.body)
-  .then(res => {
-      return res.status(200).json({ message: "User updated successfully" });
-  })
-  .catch(err =>{
-    console.log(err)
-      return res.status(400).json({ message: "User not updated" });
-  })
+// const UpdateSingleIntern = async (req, res, next) => {
+//   const _id = req.params.id;
+//   console.log(req.body);
+//   InternData.findByIdAndUpdate(_id, req.body)
+//   .then(res => {
+//       return res.status(200).json({ message: "User updated successfully" });
+//   })
+//   .catch(err =>{
+//     console.log(err)
+//       return res.status(400).json({ message: "User not updated" });
+//   })
+
+
   // let intern = await InternData.findByIdAndUpdate(_id, req.body);
   // intern = await intern
   //   .save()
@@ -102,7 +104,24 @@ const UpdateSingleIntern = async (req, res, next) => {
   //     console.log(er);
   //     return res.status(400).json({ message: "User not updated" });
   //   });
-};
+// };
+
+//controller code to update single record of data by Id in database
+const UpdateSingleIntern = async (req, res, next) => {
+  const _id = req.params.id;
+  console.log(req.body);
+  let intern = await InternData.findByIdAndUpdate(_id, req.body);
+  intern = await intern
+  .save()
+  .then(() => {
+  console.log("updated");
+  return res.status(200).json({ message: "User updated successfully" });
+  })
+  .catch((er) => {
+  console.log(er);
+  return res.status(400).json({ message: "User not updated" });
+  });
+  };
 
 //controller code to delete single record of data using Id from database;
 const DeleteInternData = async (req, res, next) => {
